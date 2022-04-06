@@ -1,5 +1,16 @@
 <head>
-  <title>Test Page: Don't Panic</title>
+  {% if page.title %}
+    <title>{{ page.title }} | Test Page</title>
+  {% else %}
+    <title>Test Page: Don't Panic</title>
+  {% endif %}
+  {% if page.description %}
+    <meta name="description" content="{{ page.description }}">
+  {% else %}
+    <meta name="description" content="This is a dangerous site.">
+  {% endif %}
+  <link href="/favicon.png" rel="icon">
+  <link href="/apple-touch-icon.png" rel="apple-touch-icon">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- <script src="https://kit.fontawesome.com/08ad6698c6.js" crossorigin="anonymous"></script> -->
